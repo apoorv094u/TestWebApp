@@ -1,0 +1,467 @@
+/**
+ * @file help.css
+ *
+ */
+
+/**********************************************************************************************************************
+ * SPECIFICS
+ **********************************************************************************************************************/
+@font-face {
+  font-family: 'HelpContent';
+  src: url("./font/MobistarReg.otf") format("opentype"); }
+
+/**********************************************************************************************************************
+ * RESET
+ **********************************************************************************************************************/
+* {
+  position: absolute;
+}
+
+div {
+  background-repeat: no-repeat;
+  background-position: left top;
+  width: inherit;
+  height: inherit;
+  top: 0px;
+  left: 0px;
+}
+
+li {
+  background-position: left top;
+  width: inherit;
+  height: inherit;
+}
+
+video {
+  background-repeat: no-repeat;
+  background-position: left top;
+  width: inherit;
+  height: auto;
+  top: 0px;
+  left: 0px;
+}
+
+/**
+ * Set margins and paddings to 0, and font-properties to a default value.
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+pre {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+/*
+ * Remove default table styling.
+ * Tables still need 'cellspacing="0"' in the markup.
+ */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/*
+ * Reset text alignment and typography for special tags.
+ */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+/**********************************************************************************************************************
+ * HELP
+ **********************************************************************************************************************/
+body.help {
+  padding: 0px;
+  background-color: #181818;
+
+  font-family: 'HelpContent';
+  font-size: 22px;
+  color: #ffffff;
+  position: relative;
+  width: 100%;
+  margin-left: 25px;
+  line-height: 1.35;
+}
+
+body.help h1, body.help .h1 {
+  position: relative;
+  font-size: 40px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+body.help p {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+body.help img.Icon, body.help img.icon {
+  position: relative;
+  margin: 1px 0 1px 0;
+  vertical-align: middle;
+}
+
+body.help table img.Icon, body.help table img.icon {
+  margin: 0;
+}
+
+body.help ul, body.help li, body.help table, body.help tr, body.help td, body.help th {
+  position: relative;
+}
+
+body.help ul {
+  list-style: none;
+}
+
+body.help table {
+  width: 800px;
+  margin-top: -25px;
+  margin-left: 25px;
+}
+
+body.help tr {
+  height: 36px; }
+
+body.help th {
+  width: 100%;
+  padding: 25px 0 10px;
+  font-size: 28px;
+}
+
+body.help td {
+  vertical-align: middle;
+}
+
+body.help td.column1 {
+  width: 130px;
+  text-align: center;
+}
+
+body.help td.column2 {
+  width: 800px;
+}
+
+body.help li {
+  color: #ffffff;
+  font-size: 22px;
+  padding-top: 10px;
+  text-indent: -18px;
+}
+
+body.help > ul {
+  padding-bottom: 24px;
+  padding-left: 25px;
+}
+
+body.help > ul > li::before,
+body.help > ul > li > ul > li > ul > li > ul > li::before {
+  content: "â€¢";
+  color: #ffffff;
+  font-size: 21px;
+  vertical-align: 0px;
+  padding-right: 7px;
+}
+
+body.help > ul > li > ul {
+  padding-left: 31px;
+}
+
+body.help > ul > li > ul > li::before {
+  content: "o";
+  color: #ffffff;
+  font-size: 15px;
+  vertical-align: 3px;
+  padding-right: 9px;
+}
+
+body.help > ul > li > ul > li {
+  text-indent: -19px;
+}
+
+body.help > ul > li > ul > li > ul {
+  padding-left: 27px;
+}
+
+body.help > ul > li > ul > li > ul > li::before {
+  content: ".";
+  color: #ffffff;
+  font-size: 18px;
+  vertical-align: 5px;
+  padding-right: 9px;
+}
+
+body.help > ul > li > ul > li > ul > li {
+  text-indent: -15px;
+}
+
+body.help > ul > li > ul > li > ul > li > ul {
+  padding-left: 30px;
+}
+
+body.help span {
+  position: relative;
+}
+
+body.help .underline {
+  text-decoration: underline;
+}
+
+body.help .italic {
+  font-style: italic;
+}
+
+/* Icons ******************************************************************************************/
+.Icon.RCDecoder, .icon.RCDecoder {
+    content: url("./icons/rc_decoder_power.png");
+}
+
+.Icon.RCTV, .icon.RCTV {
+    content: url("./icons/rc_tv_power.png");
+}
+
+.Icon.RCHome, .icon.RCHome {
+    content: url("./icons/rc_home.png");
+}
+
+.Icon.RCBack, .icon.RCBack {
+    content: url("./icons/rc_back.png");
+}
+
+.Icon.RCExit, .icon.RCExit {
+    content: url("./icons/rc_exit.png");
+}
+
+.Icon.RCPVR, .icon.RCPVR {
+    content: url("./icons/rc_pvr.png");
+}
+
+.Icon.RCVOD, .icon.RCVOD {
+    content: url("./icons/rc_vod.png");
+}
+
+.Icon.RCRed, .icon.RCRed {
+    content: url("./icons/rc_red_button.png");
+}
+
+.Icon.RCOptions, .icon.RCOptions {
+    content: url("./icons/rc_options.png");
+}
+
+.Icon.RCArrowUp, .icon.RCArrowUp {
+    content: url("./icons/rc_arrow_up.png");
+}
+
+.Icon.RCArrowDown, .icon.RCArrowDown {
+    content: url("./icons/rc_arrow_down.png");
+}
+
+.Icon.RCArrowLeft, .icon.RCArrowLeft {
+    content: url("./icons/rc_arrow_left.png");
+}
+
+.Icon.RCArrowRight, .icon.RCArrowRight {
+    content: url("./icons/rc_arrow_right.png");
+}
+
+.Icon.RCOK, .icon.RCOK {
+    content: url("./icons/rc_ok.png");
+}
+
+.Icon.RCDelete, .icon.RCDelete {
+    content: url("./icons/rc_delete.png");
+}
+
+.Icon.RCPlayPause, .icon.RCPlayPause {
+    content: url("./icons/rc_play_pause.png");
+}
+
+.Icon.RCRecord, .icon.RCRecord {
+    content: url("./icons/rc_record.png");
+}
+
+.Icon.RCStop, .icon.RCStop {
+    content: url("./icons/rc_stop.png");
+}
+
+.Icon.RCRewind, .icon.RCRewind {
+    content: url("./icons/rc_rewind.png");
+}
+
+.Icon.RCFastForward, .icon.RCFastForward {
+    content: url("./icons/rc_fastforward.png");
+}
+
+.Icon.RCChannelPlus, .icon.RCChannelPlus {
+    content: url("./icons/rc_channel_plus.png");
+}
+
+.Icon.RCChannelMinus, .icon.RCChannelMinus {
+    content: url("./icons/rc_channel_minus.png");
+}
+
+.Icon.RCVolume, .icon.RCVolume {
+    content: url("./icons/rc_volume.png");
+}
+
+.Icon.RCVolumePlus, .icon.RCVolumePlus {
+    content: url("./icons/rc_volume_plus.png");
+}
+
+.Icon.RCVolumeMinus, .icon.RCVolumeMinus {
+    content: url("./icons/rc_volume_minus.png");
+}
+
+.Icon.RCMute, .icon.RCMute {
+    content: url("./icons/rc_mute.png");
+}
+
+.Icon.RCPlus, .icon.RCPlus {
+    content: url("./icons/rc_plus.png");
+}
+
+.Icon.RCMinus, .icon.RCMinus {
+    content: url("./icons/rc_minus.png");
+}
+
+.Icon.RCGuide, .icon.RCGuide {
+    content: url("./icons/rc_guide.png");
+}
+
+.Icon.RCPVR, .icon.RCPVR {
+    content: url("./icons/rc_pvr.png");
+}
+
+.Icon.RC0_9, .icon.RC0_9 {
+    content: url("./icons/rc_0_9.png");
+}
+
+.Icon.RC0, .icon.RC0 {
+    content: url("./icons/rc_0.png");
+}
+
+.Icon.RC9, .icon.RC9 {
+    content: url("./icons/rc_9.png");
+}
+
+.Icon.RecordingPlanned, .icon.RecordingPlanned {
+    content: url(./icons/IconRec.png);
+}
+
+.Icon.RecordingInProgress, .icon.RecordingInProgress {
+    content: url(./icons/IconRec.png);
+}
+
+.Icon.RecordingCompleted, .icon.RecordingCompleted {
+    content: url(./icons/IconRecComplete.png);
+}
+
+.Icon.RecordingStopped, .icon.RecordingStopped {
+    content: url(./icons/IconRecStopped.png);
+}
+
+.Icon.RecordingFailed, .icon.RecordingFailed {
+    content: url(./icons/IconRecFail.png);
+}
+
+.Icon.RecordingConflict, .icon.RecordingConflict {
+    content: url(./icons/IconRecConflict.png);
+}
+
+.Icon.SeriesPlanned, .icon.SeriesPlanned {
+    content: url(./icons/IconSerieRec.png);
+}
+
+.Icon.SeriesCompleted, .icon.SeriesCompleted {
+    content: url(./icons/IconSerieRecComplete.png);
+}
+
+.Icon.SeriesStopped, .icon.SeriesStopped {
+    content: url(./icons/IconSerieRecStopped.png);
+}
+
+.Icon.SeriesFailed, .icon.SeriesFailed {
+    content: url(./icons/IconSerieRecFail.png);
+}
+
+.Icon.SeriesConflict, .icon.SeriesConflict {
+    content: url(./icons/IconSerieRecConflict.png);
+}
+
+.Icon.Folder, .icon.Folder {
+    content: url(./icons/IconFolder.png);
+}
+
+.Icon.Series, .icon.Series {
+    content: url(./icons/IconSerie.png);
+}
+
+.Icon.IconAge_1, .icon.IconAge_1 {
+    content: url(./icons/IconAge_1.png);
+}
+
+.Icon.IconAge_12, .icon.IconAge_12 {
+    content: url(./icons/IconAge_12.png);
+}
+
+.Icon.IconAge_21, .icon.IconAge_21 {
+    content: url(./icons/IconAge_21.png);
+}
+
+.Icon.HardHearing, .icon.HardHearing {
+    content: url(./icons/IconHardHearing.png);
+}
+
+.Icon.SubtitleTracks, .icon.SubtitleTracks {
+    content: url(./icons/IconSubtitleTracks.png);
+}
+
+.Icon.AudioTracks, .icon.AudioTracks {
+    content: url(./icons/IconAudioTracks.png);
+}
+
+.Icon.HD, .icon.HD {
+    content: url(./icons/IconHD.png);
+}
+
+.Icon.Widescreen, .icon.Widescreen {
+    content: url(./icons/IconWidescreen.png);
+}
+
+.Icon.Dolby, .icon.Dolby {
+    content: url(./icons/IconDolby.png);
+}
+
+.Icon.Protected, .icon.Protected {
+    content: url(./icons/IconProtected.png);
+}
+
+.Icon.Reminder, .icon.Reminder {
+    content: url(./icons/IconReminder.png);
+}
+
+.Icon.Marked, .icon.Marked {
+    content: url(./icons/IconMarked.png);
+}
